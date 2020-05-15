@@ -1,0 +1,185 @@
+{
+	"layer": "top",
+	"position": "top",
+
+	"modules-left": [
+		"sway/workspaces",
+		"sway/mode",
+		"custom/spotify",
+		"custom/right-arrow-dark"
+	],
+	"modules-center": [
+		"custom/left-arrow-dark",
+		"clock",
+		"custom/right-arrow-dark"
+	],
+	"modules-right": [
+		/*"custom/left-arrow-dark",
+		"clock",
+		"custom/left-arrow-light",*/
+		"custom/left-arrow-dark",
+		"pulseaudio",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"memory",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"cpu",
+		"custom/fan",
+		"temperature",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"battery#bat1",
+		"battery",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		//"disk",
+		//"disk#disk2",
+		//"custom/left-arrow-light",
+		//"custom/left-arrow-dark",
+		"tray"
+	],
+
+	"custom/left-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/left-arrow-light": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-light": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"sway/workspaces": {
+		"disable-scroll": false,
+		"format": "{name}"
+	},
+	"sway/mode": {
+		"format": ": {}",
+		"max-length": 50
+	},
+
+	"clock": {
+		"interval": 1,
+		"format": "{:%a %I:%M:%S %m-%d}",
+		"tooltip": false
+	},
+
+	"pulseaudio": {
+		"format": "{icon} {volume:2}%",
+		"format-bluetooth": "{icon}  {volume}%",
+		"format-muted": "MUTE",
+		"format-icons": {
+			"headphones": "",
+			"default": [
+				"",
+				""
+			]
+		},
+		"scroll-step": 5,
+		"on-click": "pamixer -t",
+		"on-click-right": "pavucontrol"
+	},
+
+	"custom/spotify": {
+        "interval": 1,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/spotify.sh",
+        "exec-if": "pgrep spotify",
+        "escape": true,
+		"max-length": 100,
+		"on-click": "playerctl play-pause",
+		"on-click-right": "playerctl next"
+    },
+
+	"custom/fan": {
+        "interval": 1,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/fan_speed.sh",
+        "exec-if": "pgrep thinkfan",
+        "escape": true
+    },
+
+	"memory": {
+		"interval": 5,
+		"format": " {}%"
+	},
+	"cpu": {
+		"interval": 5,
+		"format": "CPU {usage:2}%",
+		"on-click": "tilix -t 'quick htop' -e htop"
+	},
+	"temperature": {
+		// "thermal-zone": 2,
+		"hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input",
+		// "critical-threshold": 80,
+		"format-critical": " {temperatureC}°C",
+		"format": " {temperatureC}°C"
+	},
+	"battery": {
+        "interval": 10,
+		"bat": "BAT0",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        // Connected to AC
+        "format": " {icon} {capacity}%", // Icon: bolt
+        // Not connected to AC
+        "format-discharging": "{icon} {capacity}%",
+        "format-icons": [
+            "", // Icon: battery-full
+            "", // Icon: battery-three-quarters
+            "", // Icon: battery-half
+            "", // Icon: battery-quarter
+            ""  // Icon: battery-empty
+        ],
+        "tooltip": true
+    },
+	"battery#bat1": {
+        "interval": 10,
+		"bat": "BAT1",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        // Connected to AC
+        "format": " {icon} {capacity}%", // Icon: bolt
+        // Not connected to AC
+        "format-discharging": "{icon}  {capacity}%",
+        "format-icons": [
+            "", // Icon: battery-full
+            "", // Icon: battery-three-quarters
+            "", // Icon: battery-half
+            "", // Icon: battery-quarter
+            ""  // Icon: battery-empty
+        ],
+        "tooltip": true
+    },
+	"disk": {
+		"interval": 5,
+		"format": "Disk {path} {percentage_used:2}%",
+		"path": "/"
+	},
+	"disk#disk2": {
+		"interval": 5,
+		"format": "Disk {path} {percentage_used:2}%",
+		"path": "/home/"
+	},
+	"backlight": {
+    	"device": "intel_backlight",
+    	"format": "{percent}% {icon}",
+    	"format-icons": ["", ""]
+	},
+	"tray": {
+        "icon-size": 18,
+        "spacing": 10
+    }
+}
