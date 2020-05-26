@@ -49,6 +49,8 @@ alias loadnvm='NVM_DIR="$HOME/.nvm"; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH="$(yarn global bin):/$HOME/.local/bin:$HOME/bin:$PATH"
+export SPICETIFY_INSTALL="/home/grey/spicetify-cli"
+export PATH="$SPICETIFY_INSTALL:$PATH"
 
 eval "$(hub alias -s)"
 
@@ -77,9 +79,8 @@ export EDITOR='nvim'
 alias vim="nvim"
 alias betterdiscordctl="betterdiscordctl --discord /usr/lib64/discord --modules /home/grey/.config/discord/0.0.10/modules/"
 alias config='/usr/bin/git --git-dir=/home/grey/.cfg/ --work-tree=/home/grey'
-alias wg_up="nmcli --ask connection up grey"
-alias wg_down="nmcli --ask connection down grey"
-alias wg_restart="nmcli --ask connection down grey; nmcli --ask connection up grey"
+
+source ~/.secret.sh
 function list_installed_pkgs {
   rpm -qa --queryformat '%10{size} - %-25{name} \t %{version} \t %{os} \n' | sort -n | awk '{print $1/1024/1024, $2, $3, $4}'
 }
