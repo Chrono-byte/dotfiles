@@ -145,6 +145,9 @@ bindsym $mod+Shift+semicolon mode "$mode_system"
     # screenshot
     bindsym --release Print exec grimshot copy area
 
+    # dismiss mako
+    bindsym $mod+Shift+d exec makoctl dismiss -a
+
 # Moving around:
     # Move your focus around
     bindsym $mod+$left focus left

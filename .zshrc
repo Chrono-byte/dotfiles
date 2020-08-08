@@ -77,7 +77,7 @@ export EDITOR='nvim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"s
 alias vim="nvim"
-alias betterdiscordctl="betterdiscordctl --discord /usr/lib64/discord --modules /home/grey/.config/discord/0.0.10/modules/"
+alias betterdiscordctl="betterdiscordctl --discord /usr/lib64/discord --modules /home/grey/.config/discord/0.0.11/modules/"
 alias config='/usr/bin/git --git-dir=/home/grey/.cfg/ --work-tree=/home/grey'
 
 source ~/.secret.sh

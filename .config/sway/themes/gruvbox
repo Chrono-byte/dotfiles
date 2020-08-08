@@ -1,14 +1,14 @@
-output * bg ~/Pictures/hanged-in-the-sunset-by-uthe_sonnie-1600×900.jpg fill
+output * bg ../wallpapers/eddie-mendoza-information-age.jpg stretch
 
 #
 # Color definition
 #
 
-set $c1 #fd472fe2
-set $c2 #0677efe2
-set $c3 #99a2eae2
-set $c4 #333142e2
-set $c5 #342f73e2
+set $c1 #fd472f
+set $c2 #d79921
+set $c3 #99a2ea
+set $c4 #333142
+set $c5 #342f73
 
 
 set $white #f4f4f8
@@ -38,18 +38,18 @@ set $urgent_indicator $c3
 
 # Set inner/outer gaps
 default_border normal 0
-gaps inner 4
+gaps inner 2
 gaps outer 2
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps off
+smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 smart_borders on
 
 # Hide Title Bars
-for_window [app_id="^.*"] opacity 1
-#default_border pixel 2
+for_window [app_id="^.*"] opacity 0.95
+default_border pixel 2
 default_floating_border pixel 4
 hide_edge_borders smart
 
