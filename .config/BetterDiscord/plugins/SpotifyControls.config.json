@@ -1,0 +1,11 @@
+{
+	"changelog": {
+		"currentversion": "1.0.7"
+	},
+	"playerState": {
+		"maximized": false
+	},
+	"settings": {
+		"addTimeline": true
+	}
+}
