@@ -18,7 +18,7 @@ configuration {
 	show-icons: true;
 	drun-display-format: "{name}";
 	sidebar-mode: false;
-	theme: "~/.config/rofi/themes/simonvic_fullscreen.rasi";
+	theme: "~/.config/rofi/themes/chronomly_fullscreen.rasi";
 	display-window: "缾";
 	display-run: "$";
 	display-ssh: "~#";
