@@ -77,7 +77,6 @@ export EDITOR='nvim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"s
 alias vim="nvim"
-alias betterdiscordctl="betterdiscordctl --discord /usr/lib64/discord --modules /home/grey/.config/discord/0.0.11/modules/"
 alias config='/usr/bin/git --git-dir=/home/grey/.cfg/ --work-tree=/home/grey'
 alias please='sudo'
 
@@ -85,6 +84,9 @@ source ~/.secret.sh
 function list_installed_pkgs {
   rpm -qa --queryformat '%10{size} - %-25{name} \t %{version} \t %{os} \n' | sort -n | awk '{print $1/1024/1024, $2, $3, $4}'
 }
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -128,8 +128,8 @@ bindsym $mod+Shift+semicolon mode "$mode_system"
     #bindsym $mod+Shift+m exec swaynag -t warning -m 'Lock the computer?' -b 'Yes, lock' 'swaylock -f -c 000000'
 
     # backlight
-    bindsym XF86MonBrightnessDown exec light -U 10%
-    bindsym XF86MonBrightnessUp exec light -A 10%
+    bindsym XF86MonBrightnessDown exec light -U 7.5%
+    bindsym XF86MonBrightnessUp exec light -A 7.5%
 
     # sound control
     bindsym XF86AudioLowerVolume exec pamixer -d 5
@@ -139,8 +139,7 @@ bindsym $mod+Shift+semicolon mode "$mode_system"
     bindsym Shift+XF86AudioLowerVolume exec playerctl next
     bindsym Shift+XF86AudioMute exec playerctl previous
     bindsym XF86AudioMicMute exec pamixer --source 1 -t
-
-    bindsym XF86AudioMute exec pamixer -t
+    bindsym XF86AudioMute exec pulsemixer --id sink-0 --toggle-mute --get-mute
 
     # screenshot
     bindsym --release Print exec grimshot copy area

@@ -1,12 +1,11 @@
-#output * bg ~/Pictures/50492920_p0_master1200_waifu2x_art_noise1_scale_tta_1.png fill
-#output * bg ~/Pictures/keqing-wallpaper.png fill
-output * bg ~/Downloads/shockvsworld.png fill
+output * bg ../wallpapers/shoto-todoroki-fire-my-hero-academia-70156.jpg fill
+
 #
 # Color definition
 #
 
 set $c1 #fd472fe2
-set $c2 #0677efe2
+set $c2 #bf2f2fe2
 set $c3 #99a2eae2
 set $c4 #333142e2
 set $c5 #342f73e2

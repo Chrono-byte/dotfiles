@@ -1,0 +1,19 @@
+{
+	"changeLog": {
+		"version": "1.1.1"
+	},
+	"changeLogs": {
+		"BDFDB": "1.2.9",
+		"CreationDate": "1.4.0",
+		"JoinedAtDate": "1.2.5",
+		"PluginRepo": "2.1.2",
+		"ServerCounter": "1.0.3",
+		"ShowHiddenChannels": "2.8.9",
+		"ThemeRepo": "2.1.2"
+	},
+	"settings": {
+		"showSupportBadges": true,
+		"showToasts": true,
+		"useChromium": false
+	}
+}
