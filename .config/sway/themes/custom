@@ -1,5 +1,5 @@
-#output * bg ~/Pictures/50492920_p0_master1200_waifu2x_art_noise1_scale_tta_1.png fill
-#output * bg ~/Pictures/keqing-wallpaper.png fill
+# output * bg ~/Pictures/50492920_p0_master1200_waifu2x_art_noise1_scale_tta_1.png fill
+# output * bg ~/Pictures/keqing-wallpaper.png fill
 output * bg ~/Downloads/shockvsworld.png fill
 #
 # Color definition
